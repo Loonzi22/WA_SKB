@@ -30,23 +30,23 @@
         <main>
 
             <figure>
-                <img src = "assets/images/kartinki-estetika-priroda-3.jpg" alt="tady musi byt obrazek" style = "width:100%">
-                <img src = "assets/images/kartinki-estetika-priroda-2.jpg" alt = "tady musi byt obrazek" style = "width:100%">
-                <img src = "assets/images/kartinki-estetika-priroda-14.jpg" alt="tady musi byt obrazek" style = "width:100%">
-                <img src = "assets/images/kartinki-estetika-priroda-26.jpg" alt="tady musi byt obrazek" style = "width:100%">
-                <img src = "assets/images/kartinki-estetika-priroda-31.jpg" alt="tady musi byt obrazek" style = "width:100%">
-                
+                <img src="assets/images/kartinki-estetika-priroda-3.jpg" alt="tady musi byt obrazek" style="width:100%">
+                <img src="assets/images/kartinki-estetika-priroda-2.jpg" alt="tady musi byt obrazek" style="width:100%">
+                <img src="assets/images/kartinki-estetika-priroda-14.jpg" alt="tady musi byt obrazek" style="width:100%">
+                <img src="assets/images/kartinki-estetika-priroda-26.jpg" alt="tady musi byt obrazek" style="width:100%">
+                <img src="assets/images/kartinki-estetika-priroda-31.jpg" alt="tady musi byt obrazek" style="width:100%">
+                <img src="assets/images/kartinki-estetika-priroda-53.jpg" alt="tady musi byt obrazek" style="width:100%">
 
-              </figure>
-           
+            </figure>
 
 
-                            
+
+
         </main>
         <footer>
-    
+
             <p> copy; </p>
-            <input type = "color" id="colorPicker" value="rgb(244, 244, 244)">
+            <input type="color" id="colorPicker" value="rgb(244, 244, 244)">
         </footer>
     </div>
 
@@ -61,15 +61,15 @@
         colorPicker.addEventListener('input', () => {
             const color = colorPicker.value;
             body.style.background = color;
-           
+
             // Převod hex na RGB
             const r = parseInt(color.substr(1, 2), 16);
             const g = parseInt(color.substr(3, 2), 16);
             const b = parseInt(color.substr(5, 2), 16);
-           
+
             // Výpočet světlosti (luminance) podle vnímání oka
             const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
-           
+
             // Pokud je světlost vysoká, nastavíme černý text, jinak bílý
             const textColor = luminance > 0.5 ? 'black' : 'white';
             textElements.forEach(el => el.style.color = textColor);
