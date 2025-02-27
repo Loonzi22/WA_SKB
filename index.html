@@ -20,9 +20,9 @@
             <ul>
                 <li><a href="index.html">Domu</a>></li>
                 <li><a href="gallery.html">Gallery</a>></li>
+                <li><a href="01-Bootstrap-web/index.html"> Bootstrap web</a>></li>
                 <li><a href="#">O nas</a>></li>
                 <li><a href="#">Kontakt</a>></li>
-
             </ul>
 
         </nav>
@@ -67,9 +67,9 @@
             </div>
         </main>
         <footer>
-    
+
             <p> copy; </p>
-            <input type = "color" id="colorPicker" value="rgb(244, 244, 244)">
+            <input type="color" id="colorPicker" value="rgb(244, 244, 244)">
         </footer>
     </div>
 
@@ -84,15 +84,15 @@
         colorPicker.addEventListener('input', () => {
             const color = colorPicker.value;
             body.style.background = color;
-           
+
             // Převod hex na RGB
             const r = parseInt(color.substr(1, 2), 16);
             const g = parseInt(color.substr(3, 2), 16);
             const b = parseInt(color.substr(5, 2), 16);
-           
+
             // Výpočet světlosti (luminance) podle vnímání oka
             const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
-           
+
             // Pokud je světlost vysoká, nastavíme černý text, jinak bílý
             const textColor = luminance > 0.5 ? 'black' : 'white';
             textElements.forEach(el => el.style.color = textColor);
