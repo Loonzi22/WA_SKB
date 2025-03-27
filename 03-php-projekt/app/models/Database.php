@@ -22,7 +22,7 @@ class Database {
             $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             
             // Výpis informace o úspěšném připojení (pro testování)
-            // echo "Připojení k databázi bylo úspěšné!  JENOM PRO TESTOVANI, LEPSI ZAKOMENTOVAT <br>";                //!!!!!
+            // echo "Připojení k databázi bylo úspěšné!<br>";
             
         } catch (PDOException $exception) {
             echo "Chyba připojení: " . $exception->getMessage();
@@ -33,5 +33,5 @@ class Database {
 
 // Pro otestování připojení stačí tento soubor spustit
 // Můžete tento kód zakomentovat po ověření
-$database = new Database();
-$database->getConnection();
+// $database = new Database();
+// $database->getConnection();

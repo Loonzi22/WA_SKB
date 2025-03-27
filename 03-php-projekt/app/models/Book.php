@@ -1,7 +1,7 @@
 <?php
 
 class Book {
-    private $db;  //pripojeni k databaze
+    private $db;
 
     public function __construct($db) {
         $this->db = $db;
@@ -29,5 +29,12 @@ class Book {
             ':link' => $link,
             ':images' => json_encode($images) // Ukládání obrázků jako JSON
         ]);
+    }
+
+    public function getAll() {
+        $sql = "SELECT * FROM books ORDER BY created_at DESC";
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }
