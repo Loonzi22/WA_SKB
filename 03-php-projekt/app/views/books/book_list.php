@@ -32,9 +32,13 @@
                 </div>
             </div>
         </nav>
-        <h2>Výpis knih</h2>
+        <h1>Výpis knih</h1>
          <?php if(!empty($books)): ?>
-            <!-- <h3>Hrubý výpis knih</h3> -->
+
+<!-- PHP CAST 2 -->
+
+            <!-- <h3> Hrubý výpis knih</h3> -->
+            <!--<h3>Lepší výpis knih</h3> -->
             <?php // var_dump($books); ?>
             <!-- <h3>Lepší výpis knih</h3> -->
             <pre><?php // print_r($books); ?></pre>
