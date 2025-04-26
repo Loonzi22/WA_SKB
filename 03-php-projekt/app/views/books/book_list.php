@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="cs">
 <head>
@@ -26,22 +28,32 @@
                             <a class="nav-link" href="../views/books/book_create.php">Přidat knihu</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../controllers/book_list.php">Výpis knih</a>
+                            <a class="nav-link" href="#">Výpis knih</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../auth/register.php">Registrace</a>
-                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto">
+                        <?php if (isset($_SESSION['username'])): ?>
+                            <li class="nav-item">
+                                <span class="nav-link text-white">Přihlášen jako: <strong><?= htmlspecialchars($_SESSION['username']) ?></strong></span>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../controllers/logout.php">Odhlásit se</a>
+                            </li>
+                        <?php else: ?>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../views/auth/login.php">Přihlášení</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../views/auth/register.php">Registrace</a>
+                            </li>
+                        <?php endif; ?>
                     </ul>
                 </div>
             </div>
         </nav>
-        <h1>Výpis knih</h1>
+        <h2>Výpis knih</h2>
          <?php if(!empty($books)): ?>
-
-<!-- PHP CAST 2 -->
-
-            <!-- <h3> Hrubý výpis knih</h3> -->
-            <!--<h3>Lepší výpis knih</h3> -->
+            <!-- <h3>Hrubý výpis knih</h3> -->
             <?php // var_dump($books); ?>
             <!-- <h3>Lepší výpis knih</h3> -->
             <pre><?php // print_r($books); ?></pre>

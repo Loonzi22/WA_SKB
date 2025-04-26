@@ -31,7 +31,7 @@
                         <a class="nav-link active" aria-current="page" href="register.php">Registrace</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="/app/contorllers/login.php">Přihlášení</a>
+                        <a class="nav-link active" href="login.php">Přihlášení</a>
                     </li>
                 </ul>
             </div>

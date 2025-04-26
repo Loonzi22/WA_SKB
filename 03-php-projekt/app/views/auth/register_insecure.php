@@ -20,7 +20,7 @@
 
 <h2>Zranitelný formulář – demo SQL injection</h2>
 <p><strong>Zkuste zadat do pole:</strong><br>
-<code>test'); DROP TABLE demo_users; --</code></p>
+<code>test'); DROP TABLE users_demo; --</code></p>
 
 <form method="post">
     <label>Uživatelské jméno:</label><br>

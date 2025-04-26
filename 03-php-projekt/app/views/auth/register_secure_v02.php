@@ -21,7 +21,7 @@
 
 <h2>Bezpečný formulář – demo bez SQL injection (v02)</h2>
 <p><strong>Zkuste zadat do pole:</strong><br>
-<code>test'); DROP TABLE demo_users; --</code><br>
+<code>test'); DROP TABLE users_demo; --</code><br>
 Vstup bude uložen jako text, bez ohrožení databáze.</p>
 
 <form method="post">
